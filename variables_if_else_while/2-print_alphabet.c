@@ -16,11 +16,12 @@
 
 int main(void)
 {
-size_t i;
+int i;
 char str[] = "abcdefghijklmnopqrstuvwxyz";
-for (i = 0; i < strlen(str); i++)
+while (str[i] != '\0')
 {
 putchar(str[i]);
+i++;
 }
 putchar('\n');
 return (0);
