@@ -16,7 +16,7 @@
 
 int main(void)
 {
-int i;
+size_t i;
 char str[] = "abcdefghijklmnopqrstuvwxyz";
 for (i = 0; i < strlen(str); i++)
 {
