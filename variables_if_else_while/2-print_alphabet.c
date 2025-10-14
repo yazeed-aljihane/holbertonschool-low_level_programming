@@ -16,12 +16,10 @@
 
 int main(void)
 {
-int i;
-char str[] = "abcdefghijklmnopqrstuvwxyz";
-while (str[i] != '\0')
+char a;
+for (a = 'a'; a < 'z'; a++)
 {
-putchar(str[i]);
-i++;
+putchar(a);
 }
 putchar('\n');
 return (0);
