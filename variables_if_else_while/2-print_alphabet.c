@@ -1,7 +1,4 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
-#include <string.h>
 
 /* more headers goes there */
 
@@ -17,7 +14,7 @@
 int main(void)
 {
 char a;
-for (a = 'a'; a < 'z'; a++)
+for (a = 'a'; a <= 'z'; a++)
 {
 putchar(a);
 }
