@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-#include <string.h>
+
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
@@ -14,9 +14,9 @@
 
 int main(void)
 {
-size_t i;
+int i;
 char str[] = "_putchar";
-for (i = 0; i < strlen(str); i++)
+for (i = 0; i <= 7; i++)
 {
 _putchar(str[i]);
 }
