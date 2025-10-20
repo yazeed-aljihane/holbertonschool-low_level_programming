@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-print_most_numbers();
+more_numbers();
 return (0);
 }
 
