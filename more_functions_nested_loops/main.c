@@ -10,11 +10,10 @@
  */
 int main(void)
 {
-print_line(3);
-print_line(2);
-print_line(10);
-print_line(-4);
-
+print_diagonal(0);
+print_diagonal(2);
+print_diagonal(10);
+print_diagonal(-4);
 return (0);
 }
 
