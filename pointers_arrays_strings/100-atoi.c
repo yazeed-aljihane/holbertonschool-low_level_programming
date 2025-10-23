@@ -1,51 +1,51 @@
 #include "main.h"
-
+#include <stdio.h>
 int _atoi(char *s)
 {
 int i;
-int sign = 1;
-int j = 0;
-char k;
-int total;
-//loop on all string
+int sign = 0;
+int total = 0;
 for (i = 0; s[i] != '\0'; i++)
 {
 
-//stop to first numbet found
+
+if(s[i] == '+')
+{
+sign += 1;
+}
+else if (s[i] == '-')
+{
+sign -= 1;
+}
+
+
+
 if (s[i] >= '0' && s[i] <= '9')
 {
-//break the on first non number found
-if (s[i] < '0' || s[i] > '9')
+total = total * 10 + (s[i] - '0');
+
+
+if (s[i + 1] < '0' || s[i + 1] > '9')
 {
 break;
 }
-// turn the number from string to integer
-for (k; k != s[i]; k++)
+else
 {
-j++
+continue;
 }
-// math
-if (s[i + 1] >= '0' && s[i + 1] <= '9')
-{
-total = total * 10 + s[i]
-}
-
-
-
-
-
-
-// find the sighn of number
-if (s[i - 1] == '-')
-{
-sign = -1;
 }
 else
 {
 continue;;
 }
-
 }
+if (sign < 0)
+{
+sign = -1;
+}
+else
+{
+sign = 1;
 }
 total = total * sign;
 return total;
