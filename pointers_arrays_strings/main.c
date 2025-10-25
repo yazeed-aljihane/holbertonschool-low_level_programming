@@ -9,25 +9,16 @@
 int main(void)
 {
 
-int nb;
+char str[] =
+"Expect the best. Prepare for the worst. "
+"Capitalize on what comes.\n"
+"hello world! hello-world 0123456hello world\t"
+"hello world.hello world\n";
+char *ptr;
 
-nb = _atoi("98");
-printf("%d\n", nb);
-nb = _atoi("-402");
-printf("%d\n", nb);
-nb = _atoi("          ------++++++-----+++++--98");
-printf("%d\n", nb);
-nb = _atoi("214748364");
-printf("%d\n", nb);
-nb = _atoi("0");
-printf("%d\n", nb);
-nb = _atoi("Suite 402");
-printf("%d\n", nb);
-nb = _atoi("         +      +    -    -98 Battery Street; San Francisco, CA 94111 - USA             ");
-printf("%d\n", nb);
-nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
-printf("%d\n", nb);
-
+ptr = cap_string(str);
+printf("%s", ptr);
+printf("%s", str);
 
 
 
