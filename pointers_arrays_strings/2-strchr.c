@@ -10,16 +10,16 @@
  */
 char *_strchr(char *s, char c)
 {
-    int i;
+int i;
 
-    for (i = 0; ; i++)  /* loop will stop when s[i] == '\0' and checked inside */
-    {
-        if (s[i] == c)
-            return (s + i);
+for (i = 0; ; i++)
+{
+if (s[i] == c)
+return (s + i);
 
-        if (s[i] == '\0')
-            return (NULL);
-    }
+if (s[i] == '\0')
+return (NULL);
+}
 }
 
 
