@@ -20,19 +20,12 @@ for (i = 0; s[i] != '\0'; i++)
 	{
 	if (s[i] == accept[j])
 	{
-	break;
+	return (s + i);
 	}
 	}
 
-	if (s[i] == accept[j])
-	{
-	break;
-	}
 
 }
-if (s[i] == accept[j])
-return (s + i);
-else
 return (NULL);
 }
 
