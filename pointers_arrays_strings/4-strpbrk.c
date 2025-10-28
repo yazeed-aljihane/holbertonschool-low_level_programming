@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stddef.h>
 
 /**
  * *_strpbrk -  function that searches a string for any of a set of bytes.
@@ -30,7 +30,10 @@ for (i = 0; s[i] != '\0'; i++)
 	}
 
 }
+if (s[i] == accept[j])
 return (s + i);
+else
+return (NULL);
 }
 
 
