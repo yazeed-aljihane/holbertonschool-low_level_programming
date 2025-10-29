@@ -19,7 +19,7 @@ r += a[i * size + i];
 l += a[i * size + k];
 k--;
 }
-printf("%d, %d \n", r, l);
+printf("%d, %d\n", r, l);
 }
 
 
