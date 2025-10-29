@@ -3,25 +3,23 @@
 
 
 
-
+/**
+ * print_diagsums - sum of the two diagonals of a square matrix of integers.
+ * @a: array of integers
+ * @size: size of array
+ */
 void print_diagsums(int *a, int size)
 {
-int i, j;
+int i;
 int r, l = 0;
 int k = size - 1;
-
 for (i = 0; i < size ; i++)
 {
-for (j = 0; j < size / 2; j++)
-{
-printf("%d, %d \n", r , l);
 r += a[i * size + i];
 l += a[i * size + k];
 k--;
 }
-
-}
-printf("%d, %d \n", r , l);
+printf("%d, %d \n", r, l);
 }
 
 
