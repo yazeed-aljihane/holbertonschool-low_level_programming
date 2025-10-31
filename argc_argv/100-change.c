@@ -1,10 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+
+/**
+* main - the main porgram
+* @argc: the length
+* @argv: the array
+* Return: 0 if succsus otherwise 1 error
+*/
+
 int main (int argc, char **argv)
 {
 int i;
 int total = atoi(argv[1]);
-if(argc == 2)
+if (argc == 2)
 {
 for (i = 0; total > 0;)
 {
