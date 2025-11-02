@@ -40,7 +40,7 @@ return (testtt(s, length - 1, 0));
  */
 int testtt(char *s, int length, int g)
 {
-if (g == (length / 2) + 1)
+if (g >= length)
 return (1);
 else if (s[g] == s[length])
 return (testtt(s, length - 1, g + 1));
