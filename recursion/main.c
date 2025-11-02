@@ -1,17 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 
-
-
-
-
-
-
-
-
-
-
-
 /**
  * main - check the code
  *
@@ -19,25 +8,15 @@
  */
 int main(void)
 {
-
 int r;
 
-r = is_prime_number(1);
+r = is_palindrome("level");
 printf("%d\n", r);
-r = is_prime_number(1024);
+r = is_palindrome("redder");
 printf("%d\n", r);
-r = is_prime_number(16);
+r = is_palindrome("test");
 printf("%d\n", r);
-r = is_prime_number(17);
+r = is_palindrome("step on no pets");
 printf("%d\n", r);
-r = is_prime_number(25);
-printf("%d\n", r);
-r = is_prime_number(-1);
-printf("%d\n", r);
-r = is_prime_number(113);
-printf("%d\n", r);
-r = is_prime_number(7919);
-printf("%d\n", r);
-
 return (0);
 }
