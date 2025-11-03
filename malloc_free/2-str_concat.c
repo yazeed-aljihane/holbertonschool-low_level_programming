@@ -27,19 +27,18 @@ for (i = 0; s1[i] != '\0'; i++)
 ;
 for (j = 0; s2[j] != '\0'; j++)
 ;
-arr = malloc(sizeof(char) * (i + j + 2));
+arr = malloc(sizeof(char) * (i + j + 1));
 if (arr ==  NULL)
 return (NULL);
 
 for (k = 0; k < i; k++)
 arr[k] = s1[k];
 
-arr[i] = ' ';
 
 for (k = 0; k < j; k++)
 {
-arr[i + 1 + k] = s2[k];
+arr[i + k] = s2[k];
 }
-arr[i + j + 1] = '\0';
+arr[i + j] = '\0';
 return (arr);
 }
