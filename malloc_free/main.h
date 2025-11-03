@@ -42,7 +42,7 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 int testtt(char *s, int length,int g);
 char *create_array(unsigned int size, char c);
-
+char *_strdup(char *str);
 
 
 
