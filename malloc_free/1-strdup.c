@@ -22,7 +22,7 @@ for (i = 0; str[i] != '\0'; i++)
 {
 }
 
-arr = malloc(i);
+arr = malloc(i + 1);
 
 for (j = 0; j < i; j++)
 {
