@@ -18,8 +18,6 @@ char *arr;
 if (str == NULL)
 return (NULL);
 
-if (str == NULL)
-return (NULL);
 
 for (i = 0; str[i] != '\0'; i++)
 {
@@ -31,6 +29,6 @@ for (j = 0; j < i; j++)
 {
 arr[j] = str[j];
 }
-
+arr[i] = '\0';
 return (arr);
 }
