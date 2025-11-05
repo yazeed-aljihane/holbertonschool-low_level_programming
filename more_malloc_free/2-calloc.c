@@ -22,8 +22,7 @@ void *arr;
 if (nmemb == 0 || size == 0)
 return (NULL);
 
-arr = calloc(nmemb, size);
-
+arr = malloc(nmemb * size);
 if (arr == NULL)
 return (NULL);
 
