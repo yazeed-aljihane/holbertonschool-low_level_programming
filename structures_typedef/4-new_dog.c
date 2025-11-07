@@ -44,7 +44,7 @@ return (NULL);
 }
 for (i = 0; owner[i] != '\0'; i++)
 {
-owner_cp[i] = name[i];
+owner_cp[i] = owner[i];
 }
 
 newdog = malloc(sizeof(dog_t));
