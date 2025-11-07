@@ -23,9 +23,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 dog_t *newdog;
 char *name_cp;
 char *owner_cp;
-int i;
+int i,j,z;
 
-name_cp = malloc(strlen(name) + 1);
+
+for(j = 0; name[j] != '\0';j++)
+;
+
+for(z = 0; owner[z] != '\0';z++)
+;
+name_cp = malloc(j + 1);
 if (name_cp == NULL)
 return (NULL);
 for (i = 0; name[i] != '\0'; i++)
@@ -34,7 +40,7 @@ name_cp[i] = name[i];
 }
 name_cp[i] = '\0';
 
-owner_cp = malloc(strlen(owner) + 1);
+owner_cp = malloc(z + 1);
 if (owner_cp == NULL)
 return (NULL);
 for (i = 0; owner[i] != '\0'; i++)
