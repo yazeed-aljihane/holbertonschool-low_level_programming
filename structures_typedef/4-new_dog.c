@@ -1,7 +1,7 @@
 #include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 
 
 
@@ -25,27 +25,23 @@ char *name_cp;
 char *owner_cp;
 int i;
 
-name_cp = malloc(sizeof(name));
+name_cp = malloc(strlen(name) + 1);
 if (name_cp == NULL)
-{
-free(name_cp);
 return (NULL);
-}
 for (i = 0; name[i] != '\0'; i++)
 {
 name_cp[i] = name[i];
 }
+name_cp[i] = '\0';
 
-owner_cp = malloc(sizeof(owner));
+owner_cp = malloc(strlen(owner) + 1);
 if (owner_cp == NULL)
-{
-free(owner_cp);
 return (NULL);
-}
 for (i = 0; owner[i] != '\0'; i++)
 {
 owner_cp[i] = owner[i];
 }
+owner_cp[i] = '\0';
 
 newdog = malloc(sizeof(dog_t));
 if (newdog == NULL)
