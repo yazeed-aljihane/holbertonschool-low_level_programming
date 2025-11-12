@@ -28,12 +28,14 @@ op_t ops[] = {
 };
 int i;
 
-for (i = 0; i < 5; i++)
-{
+i = 0; 
+while(i < 5)
+{ 
+
 if (strcmp(ops[i].op, s) == 0)
-{
 return (ops[i].f);
-}
+
+i++;
 }
 return (NULL);
 }
