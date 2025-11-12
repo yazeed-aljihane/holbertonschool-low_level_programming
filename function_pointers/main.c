@@ -1,56 +1,54 @@
+#include "calc.h"
 #include <stdio.h>
-#include "function_pointers.h"
+#include <stdlib.h>
+#include <string.h>
 
 /**
- * is_98 - check if a number is equal to 98
- * @elem: the integer to check
+ * main - performs simple arithmetic operations based on command line input
+ * @argc: number of arguments passed to the program
+ * @argv: array of pointers to the arguments
  *
- * Return: 0 if false, something else otherwise.
+ * Description: The program expects exactly 3 arguments: integer, an operator,
+ * and another integer. It validates the operator and checks for
+ * division by zero. The corresponding arithmetic function is
+ * retrieved using get_op_func, executed, and the result is printed.
+ *
+ * Return: 0 on success, exits with error codes 98, 99, or 100  invalid input
+ *         or division by zero.
  */
-int is_98(int elem)
+
+int main(int argc, char **argv)
 {
-return (elem == 98);
+int (*fun)(int, int);
+int total = 0;
+if (argc == 4)
+{
+if ((*argv[2] == '+' || *argv[2] == '-' || *argv[2] == '/'
+|| *argv[2] == '*' || *argv[2] == '%')
+&& strlen(argv[2]) == 1)
+{
+if (*argv[2] == '/' && (atoi(argv[1]) == 0 || atoi(argv[3]) == 0))
+{
+printf("Error\n");
+exit(100);
 }
 
-/**
- * is_strictly_positive - check if a number is greater than 0
- * @elem: the integer to check
- *
- * Return: 0 if false, something else otherwise.
- */
-int is_strictly_positive(int elem)
+fun = get_op_func(argv[2]);
+total = fun(atoi(argv[1]), atoi(argv[3]));
+printf("%d\n", total);
+}
+else
 {
-return (elem > 0);
+printf("Error\n");
+exit(99);
+}
+}
+else
+{
+printf("Error\n");
+exit(98);
 }
 
 
-/**
- * abs_is_98 - check if the absolute value of a number is 98
- * @elem: the integer to check
- *
- * Return: 0 if false, something else otherwise.
- */
-int abs_is_98(int elem)
-{
-return (elem == 98 || -elem == 98);
-}
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-int array[20] = {0, -98, 98, 402, 1024, 4096, -1024, -98, 1, 2, 3, 4,
-5, 6, 7, 8, 9, 10, 11, 98};
-int index;
-
-index = int_index(array, 20, is_98);
-printf("%d\n", index);
-index = int_index(array, 20, abs_is_98);
-printf("%d\n", index);
-index = int_index(array, 20, is_strictly_positive);
-printf("%d\n", index);
 return (0);
 }
