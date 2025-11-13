@@ -25,9 +25,10 @@ if (argc == 4)
 {
 if ((*argv[2] == '+' || *argv[2] == '-' || *argv[2] == '/'
 || *argv[2] == '*' || *argv[2] == '%')
-&& strlen(argv[2]) == 1)
+&& strlen(argv[2]) == 1
+)
 {
-if (*argv[2] == '/' && (atoi(argv[1]) == 0 || atoi(argv[3]) == 0))
+if ((*argv[2] == '/' || *argv[2] == '%') && atoi(argv[3]) == 0)
 {
 printf("Error\n");
 exit(100);
@@ -52,3 +53,6 @@ exit(98);
 
 return (0);
 }
+
+
+
