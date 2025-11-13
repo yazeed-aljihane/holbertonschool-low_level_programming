@@ -31,8 +31,10 @@ va_start(list1, n);
 for (i = 0; i < n; i++)
 {
 printf("%d", va_arg(list1, int));
+if (separator != NULL)
+{
 if (i != n - 1)
 printf("%s", separator);
-}
+}}
 printf("\n");
 }
