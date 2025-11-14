@@ -35,10 +35,7 @@ printf("%c", va_arg(*list, int));
 void printString(va_list *list)
 {
 char *x = va_arg(*list, char*);
-if (x == NULL)
-printf("(nil)");
-else
-printf("%s", x);
+printf("%s", va_arg(*list, x));
 }
 /**
  * printLongNumber - Prints a floating-point number from a va_list
