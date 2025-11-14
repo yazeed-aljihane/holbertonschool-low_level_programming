@@ -35,7 +35,7 @@ printf("%c", va_arg(*list, int));
 void printString(va_list *list)
 {
 char *x = va_arg(*list, char*);
-printf("%s", va_arg(*list, x));
+printf("%s", x);
 }
 /**
  * printLongNumber - Prints a floating-point number from a va_list
