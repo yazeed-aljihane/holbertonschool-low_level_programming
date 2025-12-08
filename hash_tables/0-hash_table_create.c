@@ -22,7 +22,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (tableptr == NULL)
 		return (NULL);
 
-	array = calloc(size, sizeof(*hash_node_t) * size);
+	array = calloc(size, sizeof(hash_node_t *) * size);
 	if (array == NULL)
 	return (NULL);
 
