@@ -77,4 +77,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key);
 * @ht: hash table
 */
 void hash_table_print(const hash_table_t *ht);
+
+/**
+* hash_table_delete -  function that deletes a hash table.
+* @ht:  is the hash table
+*/
+void hash_table_delete(hash_table_t *ht);
 #endif /*HASH_TABLES_H*/
