@@ -30,13 +30,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	if (value == NULL)
 		value = "";
-	
+
 	index = hash_djb2((const unsigned char *)key) % ht->size;
 	tmp = ht->array[index];
-	while(tmp)
+	while (tmp)
 	{
 
-		if (strcmp(tmp->key,key) == 0)
+		if (strcmp(tmp->key, key) == 0)
 		{
 		free(tmp->value);
 		tmp->value = strdup(value);
@@ -49,7 +49,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		return (0);
 	}
-		
+
 		newnode->key = strdup(key);
 		newnode->value = strdup(value);
 		newnode->next = ht->array[index];
