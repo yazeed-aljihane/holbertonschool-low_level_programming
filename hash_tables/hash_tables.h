@@ -71,4 +71,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 * Return: value if success or NULL otherwaise
 */
 char *hash_table_get(const hash_table_t *ht, const char *key);
+
+/**
+* hash_table_print - function that prints a hash table.
+* @ht: hash table
+*/
+void hash_table_print(const hash_table_t *ht);
 #endif /*HASH_TABLES_H*/
